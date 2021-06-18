@@ -2,7 +2,11 @@
      width:100px;
      height: 100px;
 }
-.people-you-might-know {
+#map {
+  height: 400px;
+  width:100%;
+}
+  .people-you-might-know {
      background-color: #fefefe;
      padding: 1rem 0 0;
      border: 1px solid #cacaca;
