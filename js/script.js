@@ -1,9 +1,27 @@
-/* 
-## Js script first take on trying to get the APIs to work. 
-*/
+// variables to add city to fetch query on button click
+var userFormEl = document.querySelector("#form");
+var cityInputEl = document.querySelector("#cityInput");
+
 $(document).foundation(); // use to start foundation js utilities
-var getLocationId = function(){
-     fetch("https://travel-advisor.p.rapidapi.com/locations/search?query=irving&limit=5&offset=0&units=mi&location_id=1&currency=USD&sort=relevance&lang=en_US", {
+//added below code to pull in city input from the user
+var formSubmitHandler = function (event) {
+     event.preventDefault();
+   
+     var cityName = cityInputEl.value.trim();
+   
+     if (cityName) {
+      getLocationId(cityName);
+
+       cityInputEl.value = '';
+     } else {
+       alert("Please enter city");
+     }
+   };
+
+//city is added to fetch query, but wont change seach results
+var getLocationId = function(cityName){
+     
+     fetch("https://travel-advisor.p.rapidapi.com/locations/search?query=" + cityName + "&limit=5&offset=0&units=mi&location_id=2&currency=USD&sort=relevance&lang=en_US", {
      "method": "GET",
      "headers": {
           "x-rapidapi-key": "b9b5183d85msh693e7ff1575baf9p1c92abjsnf938cef3869b",
@@ -18,8 +36,8 @@ var getLocationId = function(){
      });
 };
 //searched only for location ID generated for the Irving TX area.
-// I hope nobody steals my key that would suck. I wish we could protect them.
-fetch("https://travel-advisor.p.rapidapi.com/restaurants/list?location_id=56032&restaurant_tagcategory=10591&restaurant_tagcategory_standalone=10591&currency=USD&lunit=mi&limit=5&open_now=false&lang=en_US", {
+
+     fetch("https://travel-advisor.p.rapidapi.com/restaurants/list?location_id=56032&restaurant_tagcategory=10591&restaurant_tagcategory_standalone=10591&currency=USD&lunit=mi&limit=5&open_now=false&lang=en_US", {
 	"method": "GET",
 	"headers": {
 		"x-rapidapi-key": "b9b5183d85msh693e7ff1575baf9p1c92abjsnf938cef3869b",
@@ -41,11 +59,13 @@ fetch("https://travel-advisor.p.rapidapi.com/restaurants/list?location_id=56032&
           if(restaurant.name != undefined){
           return `
           <div class="media-object" data-animate="slide-in-down">
+               <div class="media-object-section align-self-middle">
+                    <div class="thumbnail">
+                         <img src="${pictures(restaurant.photo)}">
+                    </div>
+               </div>
           <div class="media-object-section">
-            <img class="thumbnail" src="${pictures(restaurant.photo)}">
-          </div>
-          <div class="media-object-section">
-            <h5>${restaurant.name}</h5>
+            <h4>${restaurant.name}</h4>
             <p><span class="label primary">${restaurant.parent_display_name}</span>
             ${restaurant.is_closed ? '<span class="label success">Open</span>': '<span class="label success">Open</span>'}
             </p>
@@ -79,4 +99,6 @@ var cuisine = function(cuisine){
 
 var pictures = function(pictures){
       return pictures.images['small'].url;
-}
+};
+
+userFormEl.addEventListener('submit', formSubmitHandler);
