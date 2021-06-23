@@ -1,100 +1,153 @@
 <!doctype html>
 <html class="no-js" lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Heathy Spoon</title>
-    <!-- Compressed CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.2.3/motion-ui.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation-prototype.min.css">
-    <link href='https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css' rel='stylesheet' type='text/css'>   
-    <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css"> 
-     <script src="https://kit.fontawesome.com/1044c1de42.js" crossorigin="anonymous"></script>
-     <link rel="stylesheet" href="./css/styles.css">
-  </head>
-  <body>
-       <!-- Start hero search Bar -->
 
-       <header class="hero-search-filter">
-        <div class="hero-search-filter-content">
-          <img class="hero-search-filter-logo" src="" alt="" />
-          <form id="form" class="hero-search-filter-form" action="">
-            <label for="cityInput">City</label>
-            <input type="text" id="cityInput" class="hero-search-filter-form-find" />
-            <button id="fetch-button"><i class="fa fa-search"></i></button>
-          </form>
-          <ul class="hero-search-filter-menu menu align-center">
-            <li><a href="#"><i class="fa fa-vegetarian" aria-hidden="true"></i> vegetarian</a></li>
-            <li><a href="#"><i class="fa fa-vegan" aria-hidden="true"></i> vegan</a></li>
-            <li><a href="#"><i class="fa fa-Gluten Free" aria-hidden="true"></i> Gluten Free</a></li>
-            <li><a href="#"><i class="fa fa-Keto" aria-hidden="true"></i> Keto</a></li>
-          </ul>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Healthy Spoon</title>
+  <!-- Compressed CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.2.3/motion-ui.min.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation-prototype.min.css">
+  <link href='https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css' rel='stylesheet'
+    type='text/css'>
+  <script src="https://kit.fontawesome.com/1044c1de42.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+  <!-- Start Top Bar -->
+  <div class="title-bar" data-responsive-toggle="mainNavigation" data-hide-for="medium">
+    <div class="title-bar-left">
+      <button class="menu-icon" type="button" data-toggle="mainNavigation"></button>
+      <div class="title-bar-title">Menu</div>
+    </div>
+    <div class="title-bar-right">
+      <img src="./images/healthy-spoon-logo-horizontal.svg" width="100%" height="40px">
+    </div>
+  </div>
+
+  <div class="top-bar" id="mainNavigation">
+    <div class="top-bar-left">
+      <ul class="menu vertical medium-horizontal">
+        <li class="menu-text hide-for-small-only"><img src="./images/healthy-spoon-logo-horizontal.svg" width="100%"
+            height="40px"></li>
+
+      </ul>
+    </div>
+    <div class="top-bar-right">
+      <ul class="menu vertical medium-horizontal">
+
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <!-- End Top Bar -->
+  <div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit
+    data-options="animInFromLeft:fade-in; animInFromRight:fade-in; animOutToLeft:fade-out; animOutToRight:fade-out;">
+    <ul class="orbit-container">
+      <button class="orbit-previous"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button>
+      <button class="orbit-next"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button>
+      <li class="is-active orbit-slide">
+        <img class="orbit-image" src="https://picsum.photos/2000/250" alt="Space">
+        <figcaption class="orbit-caption">What if this is generated dynamically.</figcaption>
+      </li>
+      <li class="orbit-slide">
+        <img class="orbit-image" src="https://picsum.photos/2000/250" alt="Space">
+        <figcaption class="orbit-caption">What if this is generated dynamically.</figcaption>
+      </li>
+      <li class="orbit-slide">
+        <img class="orbit-image" src="https://picsum.photos/2000/250" alt="Space">
+        <figcaption class="orbit-caption">What if this is generated dynamically.</figcaption>
+      </li>
+      <li class="orbit-slide">
+        <img class="orbit-image" src="https://picsum.photos/2000/250" alt="Space">
+        <figcaption class="orbit-caption">What if this is generated dynamically.</figcaption>
+      </li>
+    </ul>
+    <nav class="orbit-bullets">
+      <button class="is-active" data-slide="0"><span class="show-for-sr">First slide details.</span><span
+          class="show-for-sr">Current Slide</span></button>
+      <button data-slide="1"><span class="show-for-sr">Second slide details.</span></button>
+      <button data-slide="2"><span class="show-for-sr">Third slide details.</span></button>
+      <button data-slide="3"><span class="show-for-sr">Fourth slide details.</span></button>
+    </nav>
+  </div>
+  <!-- end rotating banners -->
+
+  <!-- search Form -->
+  <article class="grid-container">
+    <div class="grid-x grid-margin-x">
+
+      <div class="medium-12 cell">
+        <div class="row">
+          <div class="columns medium-9">
+            <form action="" method="POST" id="restaurant-form">
+              <label>Please Enter Your City
+                <input type="text" placeholder="City" aria-describedby="exampleHelpText" required>
+              </label>
+
+              <label>Select Menu
+                <select>
+                  <option value="vegetarian">Vegetarian</option>
+                  <option value="gluten">Gluten Free</option>
+                  <option value="vegan">Vegan</option>
+                  <option value="seafood">Seafood</option>
+                  <option value="steak">Steak House</option>
+                </select required>
+              </label>
+              <button type="submit" class="button">Start</button>
+            </form>
+          </div>
         </div>
-      </header>
-      
-      
-<!--Her search bar ends-->
+      </div>
+    </div>
+  </article>
+  <!-- end search form -->
+  <!-- list restaurants -->
+  <article class="grid-container">
+    <div class="grid-x grid-margin-x">
 
-    
-<!-- list restaurants -->
-<div class="grid-x align-bottom">
-     <div class="medium-12 cell">
-       <h4>Top Restaurants</h4>
-       <div id="restaurants">
+      <div class="medium-12 cell">
+        <h4>Top Searches</h4>
+        <div id="restaurants">
 
-       </div>
-     </div>
-</div>
+        </div>
+      </div>
 
-
-<!-- end list restaurants -->
-<!-- layout starts -->
-<div class="grid-x grid-margin-x">
-     <div class="cell medium-6 large-4">
-          <h5>Icons</h5>
-          <i class="fas fa-thumbs-up"></i><br>
-          <i class="fas fa-cloud-moon-rain"></i><br>
-          <i class="fas fa-car-side"></i><br>
-          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-          <i class="far fa-star"></i><i class="far fa-star"></i><br>
-          <i class="fas fa-phone"></i> xxx-xxx-xxxx<br>
-          <i class="fas fa-dollar-sign"></i><i class="fas fa-dollar-sign"></i>
-     </div>
-     <div class="cell auto"></div>
-     <div class="cell auto"></div>
-</div>
-
-<!-- layout starts end -->
+    </div>
+  </article>
+  <!-- layout starts end -->
 
 
+  <br>
 
-<!-- end card with list items-->
+  <footer>
+    <div class="grid-x expanded callout secondary">
+
+      <div class="grid-col  span12">
+
+        <h5>Disclaimer</h5>
+        <p>Due to COVID-19 pandemic, we ask you check with your restaurant to make sure they are fully open or if they
+          are serving for carry-out only.</p>
+      </div>
+    </div>
+  </footer>
+
 
  
     
 
-  <footer class="callout large secondary">
-   
-      <div class="rounded-social-buttons">
-        <a class="social-button facebook" href="https://www.facebook.com/login/web/"></a>
-        <a class="social-button twitter" href="https://twitter.com/explore"></a>
-       <a class="social-button youtube" href="https://www.youtube.com/"></a>
-       <a class="social-button instagram" href="https://www.instagram.com/"></a>
-       <a class="social-button pinterest" href="https://www.pinterest.com/"></a>
-        
-      </div>
-    </footer>
 
-     
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.2.3/motion-ui.min.js"></script>
-    <script src="./js/script.js"></script>
-    <script>
-      $(document).foundation();
-    </script>
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.2.3/motion-ui.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+  <script src="./js/script.js"></script>
 
-  </body>
+</body>
+
 </html>
