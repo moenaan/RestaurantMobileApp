@@ -1,0 +1,127 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RestaurantLocation</title>
+    <!-- Compressed CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.2.3/motion-ui.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation-prototype.min.css">
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css' rel='stylesheet' type='text/css'>     <script src="https://kit.fontawesome.com/1044c1de42.js" crossorigin="anonymous"></script>
+     <link rel="stylesheet" href="./css/styles.css">
+  </head>
+  <body>
+       <!-- Start Top Bar -->
+    <div class="title-bar" data-responsive-toggle="mainNavigation" data-hide-for="medium">
+     <div class="title-bar-right">
+       Healthy Spoon
+     </div>
+   </div>
+
+   <!-- End Top Bar -->
+ 
+
+<!-- end list restaurants -->
+
+
+
+<!-- card with list items-->
+<hr>
+<div class="card" style="width: 100%;">
+  <div class="card-divider">
+    Healthy Spoon
+  </div>
+  <img src="https://i.imgur.com/orQ85FV.jpeg">
+  <div class="card-section">
+       <h4>Description</h4>
+       <p>It has an easy to override visual style, and is appropriately subdued.</p>
+       <span class="badge secondary"><i class="fi-share"></i></span>
+       <span class="badge success"><i class="fi-check"></i></span>
+       <span class="badge warning"><i class="fi-wrench"></i></span>
+       <hr>
+       <h4>Location</h4>
+       <div class="address">
+         <p>1234 The Street st.<br>Dallas, TX 75021<br>
+        Telephone: 123.123.1234<br>
+      website:<a href="#">www.websiteurl.com</a></p>
+       </div>
+       <div class="btn" id="find_btn">Find Me</div>
+      <div class="card" id="map">
+       <h4>Labels</h4>
+       <span class="label primary">Primary Label</span>
+       <span class="label secondary">Secondary Label</span>
+       <span class="label success">Success Label</span>
+       <span class="label alert">Alert Label</span>
+       <span class="label warning">Warning Label</span>
+  </div>
+</div>
+                    
+                  
+<!-- end card with list items-->
+
+
+</article>
+<br>
+<footer class="callout large secondary">
+    <section class="contact-us-section">
+        <div class="row medium-unstack">
+          <div class="columns contact-us-section-left">
+            <h1 class="contact-us-header">Get In Touch</h1>
+            <div class="responsive-embed">
+              <img src="https://maps.googleapis.com/maps/api/staticmap?center=campbell&zoom=13&scale=false&size=600x300&maptype=roadmap&sensor=false&format=png&visual_refresh=true" alt="Google Map of campbell" alt="" />
+            </div>
+      
+            <ul class="contact-us-list">
+              <li class="address">100 W Rincon Ave, Campbell CA 95008</li>
+              <li class="email"><a href="mailto:">healthyspoon@healthyspoon.com</a></li>
+              <li class="phone">
+                1 (555) 555 5555
+              </li>
+            </ul>
+          </div>
+          <div class="columns contact-us-section-right">
+            <h1 class="contact-us-header">Mail Us</h1>
+            <form class="contact-us-form">
+              <input type="text" placeholder="Full name">
+              <input type="email" placeholder="Email">
+              <textarea name="message" id="" rows="12" placeholder="Type your message here"></textarea>
+              <div class="contact-us-form-actions">
+                <input type="submit" class="button" value="Send it" />
+                <div>
+                  <label for="FileUpload" class="button contact-us-file-button">Attach Files</label>
+                  <input type="file" id="FileUpload" class="show-for-sr">
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+     <div class="large-3 large-offset-2 cell">
+       <ul class="menu vertical">
+        <div class="clearfix"></div>
+        <button type="button" class="button social facebook">
+          <i class="fa fa-facebook" aria-hidden="true"></i> Facebook 
+        </button>
+        <button type="button" class="button social twitter">
+          <i class="fa fa-twitter" aria-hidden="true"></i> Twitter 
+        </button>
+        <button type="button" class="button social youtube">
+          <i class="fa fa-youtube" aria-hidden="true"></i> Youtube 
+        </button>  
+        <button type="button" class="button social instagram">
+          <i class="fa fa-instagram" aria-hidden="true"></i> Instagram 
+        </button>
+
+</footer>
+
+     
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.2.3/motion-ui.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+    <script src="./js/script.js"></script>
+
+  </body>
+</html>
